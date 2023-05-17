@@ -172,16 +172,18 @@ class AuthProvider extends ChangeNotifier{
       Uid= _firebaseAuth.currentUser?.uid;
       UID= _uid!;
      }   
+
+     SharedPreferences s2 = await SharedPreferences.getInstance();
+     s2.setString("Uid", Uid!);
     //final snapshot = await _firebaseDatabaseRef.child('users/$_uid').get();
     final snapshot = await _firebaseDatabaseRef
-    .child('users').child(Uid!)
+    .child('users').child(Uid)
     .get();
 
     if (snapshot.exists) {
         print(snapshot.value);
         return true;
     } else {
-      //TODO: ADD THE UID AND USER TO THE REALTIME DATABASE
         print('No data available.');
         return false;
     }
@@ -218,7 +220,6 @@ class AuthProvider extends ChangeNotifier{
   }
 
 
-
   //STORING DATA LOCALLY
   Future saveUserDataToSharedPref() async {
     SharedPreferences s= await SharedPreferences.getInstance();
@@ -226,3 +227,4 @@ class AuthProvider extends ChangeNotifier{
   }
 
 }
+

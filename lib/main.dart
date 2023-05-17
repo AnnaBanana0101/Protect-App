@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:protect_app_test/firebase_options.dart';
 import 'package:protect_app_test/pages/auth_page.dart';
+import 'package:protect_app_test/pages/feed_page.dart';
+import 'package:protect_app_test/pages/home_page.dart';
 import 'package:protect_app_test/pages/login_page.dart';
 import 'package:protect_app_test/pages/otp_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';

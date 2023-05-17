@@ -31,4 +31,15 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <!-- SEND_SMS runtime permission not needed -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+            <data android:scheme="smsto"/>
+        </intent>
+    </queries>
+
+
 </manifest>

@@ -37,10 +37,10 @@ class MyBottomNavBar extends StatelessWidget {
               text: ' Home',
             ),
 
-            GButton(
-              icon: Icons.ac_unit_rounded,
-              text: ' Calm',
-            ),
+            // GButton(
+            //   icon: Icons.ac_unit_rounded,
+            //   text: ' Calm',
+            // ),
 
             GButton(
               icon: Icons.person_rounded,
